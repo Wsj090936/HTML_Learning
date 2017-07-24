@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<span>页面将于<span id="span1" style="color:red">5</span>秒钟后跳转，如没有跳转，请<a href="http://www.baidu.com">点击此处</a></span>
+</body>
+<script type="text/javascript">
+	var time = 5;
+	var timer;
+	timer = setInterval(function(){
+				var span = document.getElementById("span1");
+				if(time >= 1){
+				span.innerHTML = time;
+				time--;
+				}else{
+					clearInterval(timer);
+					location.href="http://www.baidu.com";
+				}
+			},1000
+			);
+</script>
+</html>

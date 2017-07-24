@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="http://www.baidu.com" onclick="fun(event)">点我</a><!-- event代表onclick这个事件 -->
+	<a href="http://www.baidu.com" onclick="return false">点我吧</a><!-- 方式二 -->
+	
+</body>
+<script type="text/javascript">
+	function fun(e){
+		if(e&&e.preventDefault){//W3C标准
+			alert("W3C标准");
+			e.preventDefault();
+		}else{//IE
+			window.event.returnValue = false;
+		}
+	}
+
+</script>
+</html>
