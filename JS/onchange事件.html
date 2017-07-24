@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<select id="city">
+		<option value="cq">重庆</option>
+		<option value="qh">青海</option>
+	</select>
+	<select id="area">
+		<option>南岸区</option>
+		<option>北碚区</option>
+		<option>渝中区</option>
+	</select>
+</body>
+<script type="text/javascript">
+	var city = document.getElementById("city");
+	city.onchange = function(){
+		var optionVal = city.value;
+		switch(optionVal){
+			case 'cq':
+				var area = document.getElementById("area");
+				area.innerHTML = "<option>南岸区</option><option>北碚区</option><option>渝中区</option>";
+				break;
+			case 'qh':
+				var area = document.getElementById("area");
+				area.innerHTML = "<option>西宁市</option><option>平安区</option>";
+				break;
+			default:
+				alert("error!");
+				break;
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#div1{
+		background-color: red;
+		width: 100px;
+		height: 100px;
+	}
+
+</style>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+<script type="text/javascript">
+	var div1 = document.getElementById("div1");
+	div1.onmouseover = function(){
+		this.style.backgroundColor = "green";//注意这里没有"-"且C变为了大写
+	}
+	div1.onmouseout = function(){
+		this.style.backgroundColor = "red";//注意这里没有"-"且C变为了大写
+	}
+	
+</script>
+</html>

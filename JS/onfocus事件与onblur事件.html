@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<label for="txt">用户名:</label>
+	<input id="txt" type="text"/><span id="action"></span>
+</body>
+<script type="text/javascript">
+	var txt = document.getElementById("txt");
+	txt.onfocus = function(){
+		var action = document.getElementById("action");
+		action.innerHTML = "获得焦点";
+		action.style.color = "green";
+	}
+	txt.onblur = function(){
+		var action = document.getElementById("action");
+		action.innerHTML = "失去焦点";
+		action.style.color = "red";
+	}
+</script>
+</html>

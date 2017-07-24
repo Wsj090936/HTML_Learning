@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="绑定方式一" onclick="alert('方式一')"/>
+	<input type="button" value="绑定方式二" onclick="fun()"/>
+	<input id="method3" type="button" value="绑定方式三"/>
+</body>
+<script type="text/javascript">
+	function fun(){
+		alert("方式二");
+	};
+	//以下是方式三
+	var btn3 = document.getElementById("method3");
+	btn3.onclick = function(){
+		alert("方式三");
+	}
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function myMethod(a,b) {//定义方式一
+		alert(a + b);
+	};
+	myMethod(1,2);
+	var method1 = function(a,b){//定义方式二
+		alert(a + b);
+	};
+	method1(2,3);
+	
+	var method = new Function("a","b","alert(a + b)");//定义方式三
+	method(3,4);
+
+	var method2 = function(a,b){有返回值的函数
+		return a + b;
+	}
+	var a = method2(4,5);
+	alert(a);
+	
+</script>
+</html>
